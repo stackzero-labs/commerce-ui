@@ -1,0 +1,13 @@
+{
+  "name": "adaptive-container",
+  "type": "registry:ui",
+  "dependencies": ["react-use-measure", "motion"],
+  "files": [
+    {
+      "path": "ui/adaptive-container.tsx",
+      "content": "\"use client\";\n\nimport {\n  AnimationControls,\n  TargetAndTransition,\n  Transition,\n} from \"motion/react\";\nimport * as React from \"react\";\n// import useMeasure from \"react-use-measure\"\n\nconst AdaptiveContainer = ({\n  children,\n  animate,\n  transition,\n  ...props\n}: React.ComponentPropsWithoutRef<\"div\"> & {\n  animate?: AnimationControls | TargetAndTransition;\n  transition?: Transition;\n}) => {\n  // const [ref, { width, height }] = useMeasure()\n\n  return <div>{children}</div>;\n};\n\nexport { AdaptiveContainer };\n",
+      "type": "registry:ui",
+      "target": ""
+    }
+  ]
+}

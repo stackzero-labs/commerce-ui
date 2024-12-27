@@ -1,0 +1,130 @@
+---
+title: Variant Selector
+description: A component that allows users to select a variant of a product
+---
+
+
+<ComponentPreview
+  name="variant-selector-demo"
+  description="A component that allows users to select a variant of a product "
+/>
+
+## Installation
+
+<ComponentInstall>
+
+<CLIInstall>
+  
+```bash
+npx shadcn@latest add https://ui.org/r/adaptive-container
+```
+
+</CLIInstall>
+
+<ManualInstall>
+
+<Steps>
+
+<Step>
+
+Install the following dependencies
+
+</Step>
+
+```bash
+npm install @radix-ui/react-radio-group
+```
+
+<Step>
+
+Copy and paste the following code into your project
+
+</Step>
+
+<ComponentSource name="variant-selector"/>
+
+<Step>
+
+Update the import paths to match your project setup
+
+</Step>
+
+</Steps>
+
+</ManualInstall>
+
+</ComponentInstall>
+
+
+## Usage
+
+
+```tsx
+import {
+  VariantSelector,
+  VariantSelectorLabel,
+  VariantGroupLegend,
+  VariantSelectorGroup,
+  VariantSelectorItem,
+  VariantItem,
+} from "@/registry/default/ui/variant-selector";
+```
+
+```tsx
+    <VariantSelector>
+      <VariantGroupLegend/>
+      <VariantSelectorGroup>
+        {variants.map((variant) => (
+          <VariantSelectorLabel key={variant.id}>
+            <VariantSelectorItem
+              id={variant.id}
+              value={variant.value}
+              disabled={variant.disabled}
+            />
+            <p className="text-sm font-medium leading-none text-foreground">
+              {variant.label}
+            </p>
+          </VariantSelectorLabel>
+        ))}
+      </VariantSelectorGroup>
+    </VariantSelector>
+```
+
+## Examples
+
+
+### Controlled
+
+<ComponentPreview
+  name="variant-selector-controlled"
+/>
+
+
+### Custom colors
+
+<ComponentPreview
+  name="variant-selector-custom-colors"
+/>
+
+
+### With Images
+
+You can also use the `VariantSelector` component to create a variant selector with images instead of just text.
+
+<ComponentPreview
+  name="variant-selector-images"
+/>
+
+
+
+### Selector for color variants
+
+You can also use the `VariantSelector` component to create a color variant selector. 
+
+In this example, we are settings the `VariantSelectorLabel` to style itself based on the color passed as a `value`.
+
+<Callout>If you just need a variant selector for colors, consider using the simpler `Variant Selector Color` component</Callout>
+
+<ComponentPreview
+  name="variant-selector-colors"
+/>

@@ -1,0 +1,138 @@
+---
+title: Star Rating
+description: A component that allows you to display a rating.
+---
+
+
+<ComponentPreview
+  name="star-rating-demo"
+  description="A component that allows you to display a rating."
+/>
+
+## Installation
+
+<ComponentInstall>
+
+<CLIInstall>
+  
+```bash
+npx shadcn@latest add https://ui.org/r/adaptive-container
+```
+
+</CLIInstall>
+
+<ManualInstall>
+
+<Steps>
+
+<Step>
+
+Install the following dependencies
+
+</Step>
+
+```bash
+npm install react-use-measure
+```
+
+<Step>
+
+Copy and paste the following code into your project
+
+</Step>
+
+<ComponentSource name="rating" />
+
+<Step>
+
+Update the import paths to match your project setup
+
+</Step>
+
+</Steps>
+
+</ManualInstall>
+
+</ComponentInstall>
+
+
+## Usage
+
+
+```tsx
+import { AdaptiveContainer } from "@/components/ui/adaptive-container"
+```
+
+```tsx
+<AdaptiveContainer>Your Adaptive Content</AdaptiveContainer>
+```
+
+## Examples
+
+{/* ### Fractions
+
+<ComponentPreview
+  name="rating-fraction"
+  description="Display a rating with fractions. For example, 4.2 out of 5."
+/>
+
+
+### Max Rating
+
+<ComponentPreview
+  name="rating-max-rating"
+  description="You can set the maximum rating value. For example, 10."
+/> */}
+
+### Custom colors
+
+<ComponentPreview
+  name="star-rating-custom-colors"
+  description="Customise the colors, such as the fill, empty colors, or the strokes."
+/>
+
+## Props
+<ComponentPropsTable componentName='Rating'/>
+
+
+{/* ## Props
+
+<TypeTable
+  type={{
+    id: {
+      description: 'The id of the rating component',
+      type: 'string',
+
+    },
+    rating : {
+      description: 'The rating value',
+      type: 'number',
+      default: 0,
+    },
+    maxRating: {
+      description: 'The maximum rating value',
+      type: 'number',
+      default: 5,
+    },
+    fullColor : {
+      description: 'The color of the filled rating',
+      type: 'string',
+      default: '#FFD700',
+    },
+    emptyColor: {
+      description: 'The color of the empty rating',
+      type: 'string',
+      default: '#C4C4C4',
+    },
+    strokeColor: {
+      description: 'The color of the stroke',
+      type: 'string',
+      default: '#D1D5DB',
+    },
+    strokeEmptyColor: {
+      description: 'The color of the empty stroke',
+      type: 'string',
+      default: '#D1D5DB',
+    }
+  }}
+/> */}

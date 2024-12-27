@@ -1,0 +1,98 @@
+---
+title: Upvote Rating
+description: A component that allows you to display a downvote and upvote rating. Similar to Reddit's voting system.
+---
+
+
+<ComponentPreview
+  name="upvote-downvote-rating-demo"
+/>
+
+## Installation
+
+<ComponentInstall>
+
+<CLIInstall>
+  
+```bash
+npx shadcn@latest add https://ui.org/r/adaptive-container
+```
+
+</CLIInstall>
+
+<ManualInstall>
+
+<Steps>
+
+<Step>
+
+Install the following dependencies
+
+</Step>
+
+```bash
+npm install react-use-measure
+```
+
+<Step>
+
+Copy and paste the following code into your project
+
+</Step>
+
+<ComponentSource name="rating" />
+
+<Step>
+
+Update the import paths to match your project setup
+
+</Step>
+
+</Steps>
+
+</ManualInstall>
+
+</ComponentInstall>
+
+
+## Usage
+
+
+```tsx
+import { UpvoteDownvoteRating } from "@/components/ui/upvote-rating"
+```
+
+```tsx
+<UpvoteDownvoteRating />
+```
+
+## Examples
+
+### Custom colors
+
+You can override any of the colors used in the rating component. 
+Just pass the prop `colors` with the color(s) you want to use.
+
+<ComponentPreview
+  name="upvote-downvote-rating-custom-colors"
+/>
+
+
+### Abbreviation
+
+You can display the rating in abbreviation format.
+
+<ComponentPreview
+  name="upvote-downvote-rating-abbreviation"
+/>
+
+### Controlled
+
+<ComponentPreview
+  name="upvote-downvote-rating-controlled"
+/>
+
+
+## Props
+
+<ComponentPropsTable componentName='UpvoteDownvoteRating'/>

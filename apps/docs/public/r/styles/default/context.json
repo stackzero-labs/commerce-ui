@@ -1,0 +1,12 @@
+{
+  "name": "context",
+  "type": "registry:lib",
+  "files": [
+    {
+      "path": "lib/context.ts",
+      "content": "\"use client\";\n\nimport React from \"react\";\n\nconst createContextHook = <T>(\n  context: React.Context<T | undefined>,\n  hookName: string,\n  providerName: string,\n) => {\n  return () => {\n    const ctx = React.useContext(context);\n    if (!ctx) {\n      throw new Error(`${hookName} must be used within a ${providerName}`);\n    }\n    return ctx;\n  };\n};\n\nconst createContext = <T>(defaultValue: T) => {\n  const Context = React.createContext<T | undefined>(defaultValue);\n  const useContext = createContextHook(Context, \"useContext\", \"Context\");\n\n  return [Context.Provider, useContext] as const;\n};\n\nexport { createContextHook, createContext };\n",
+      "type": "registry:lib",
+      "target": ""
+    }
+  ]
+}

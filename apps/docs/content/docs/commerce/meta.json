@@ -1,0 +1,17 @@
+{
+  "title": "commerce/ui",
+  "description": "The ui to build commerce app.",
+  "icon": "Cart",
+  "root": true,
+  "pages": [
+    "---Guide---",
+    "index",
+    "comparisons",
+    "...",
+    "navigation",
+    "---COMPONENTS---",
+    "...components",
+    "---BLOCKS---",
+    "...blocks"
+  ]
+}
